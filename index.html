@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPA Forecast Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen p-6">
+
+  <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-xl p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">GPA Forecast Tracker</h1>
+
+    <form id="courseForm" class="space-y-4">
+      <div>
+        <label class="block font-semibold mb-1">Course Name</label>
+        <input type="text" id="courseName" class="w-full border px-3 py-2 rounded-md" required>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Credits</label>
+        <input type="number" id="courseCredits" class="w-full border px-3 py-2 rounded-md" required>
+      </div>
+      <div>
+        <label class="block font-semibold mb-1">Grade (%)</label>
+        <input type="number" id="courseGrade" class="w-full border px-3 py-2 rounded-md" required>
+      </div>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Add Course</button>
+    </form>
+
+    <hr class="my-6">
+
+    <div>
+      <h2 class="text-xl font-semibold mb-2">Courses</h2>
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b font-bold">
+            <th class="py-2">Name</th>
+            <th>Credits</th>
+            <th>Grade (%)</th>
+          </tr>
+        </thead>
+        <tbody id="courseTableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="mt-6">
+      <h2 class="text-xl font-bold">Current GPA: <span id="gpaValue">0.00</span></h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
